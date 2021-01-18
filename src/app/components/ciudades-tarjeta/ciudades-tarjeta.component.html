@@ -1,0 +1,17 @@
+
+<div class="row row-cols-1 row-cols-md-3 mt-5 animated fadeIn" *ngIf="ciudades.length > 0">
+    <div class="col mb-4"  *ngFor="let ciudad of ciudades,index as i">
+        <div class="card border-default h-100" >
+            <div class="card-body text-default">
+            <app-map [latitud]="ciudad.lat"  [longitud]="ciudad.long" class="d-block card-img-top"></app-map>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><b>Ciudad:</b> {{ciudad.nombre}}</li>
+                <li class="list-group-item"><b>Hora:</b>  {{ciudad.hora}}</li>
+                <li class="list-group-item"><b>Temperatura:</b> {{ciudad.temperatura}} °C </li>
+              </ul>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>

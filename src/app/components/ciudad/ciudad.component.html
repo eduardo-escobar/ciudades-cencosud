@@ -1,0 +1,5 @@
+<h2 class="m-3">Información de Ciudades</h2>
+<hr>
+
+<mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+<app-ciudades-tarjeta [ciudades]="ciudades" *ngIf="!loading"></app-ciudades-tarjeta>
